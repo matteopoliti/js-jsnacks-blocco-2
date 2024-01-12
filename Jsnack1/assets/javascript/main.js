@@ -4,17 +4,19 @@ let age;
 let numbers = [];
 
 let sum = 0;
-let i = 0
-while(i < 10){
 
-    if(sum < 50){
-        age = prompt('Scrivi un numero');
-        numbers.push(+age);
-        sum += numbers[i];
-
+while(sum < 50){
+    age = prompt('Scrivi un numero');
+    let ageInt = parseInt(age)
+    if(sum + ageInt > 50){
+        alert('La somma degli elementi è maggiore a 50.');
+    }else if(sum + ageInt == 50){
+        alert('La somma degli elementi è uguale a 50.');
     }else{
-        alert( 'La somma delle età inserite è: ' + sum );
+        numbers.push(ageInt);
+        sum += ageInt;
     }
-    i++
-    console.log(age, numbers)
+    console.log(age, numbers, sum)
 }
+
+
